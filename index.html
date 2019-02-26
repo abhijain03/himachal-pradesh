@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Himachal Pradesh</title>
+    
+    <style>
+        nav{
+            background-color:#1a1a00;
+            width:auto;
+            height: 50px;
+            border-radius: 7px;
+        
+        }
+        body{
+            margin: 0;
+        }
+        
+        .heading{
+            font-size: 29px;
+            margin-right: 10px;
+        
+            padding:0;
+            color: whitesmoke;
+            margin:10px;
+            cursor: default;
+            
+        }.dropdown{
+            float: right;
+            display: none;
+            
+        }
+        h1{
+            color:#0e213a;
+            text-align: center
+        }
+        
+        .dropdown-item{
+            
+            margin: 0;
+            overflow: hidden;
+            background-color: black;
+            text-decoration: none;
+            height: 30px;
+            padding: 1px;
+            
+        }
+        
+        .dropdown-list{
+            z-index: 1;
+            margin-top: 10px;
+            position: relative;
+            display: none;
+            text-align: justify;
+            float: left;
+  
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            
+            
+        }
+        
+        .dropdown-item:hover {
+	
+            
+            background-color:#1a1a00;
+
+        }
+        
+        .dropdown:hover .dropdown-list{
+            display: block;
+            }
+        
+        
+        .dropdown-link {
+	
+            display: block;
+            background: white;
+            color: black;
+            text-decoration: none;
+            float: none;
+            min-width: 160px;;
+            padding: 12px 16px ;
+            
+
+        }
+        .dropdown-link:hover {
+            background-color: gainsboro;
+            
+ 
+        }
+        
+        .hamburger{
+            width:40px;
+            height: 40px;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .navbar-list{
+            
+            margin:0;
+            padding: 0;
+            
+            overflow: hidden;
+            
+        }
+        
+        li{
+            list-style-type: none;
+            float: left;
+            padding: 2px;
+            
+            
+        }
+        
+        .nav-link{
+            text-decoration: none;
+            color: whitesmoke;
+            display: block;
+            height: 30px;
+            margin-left:10px;
+            margin-right: 10px;
+            padding: 9px;
+            font-size: 18px;
+        }
+        
+        li>a:hover{
+            
+            background-color:  #878787;
+        }
+        
+        .wallpaper-block{
+            width: auto;
+            height: auto;
+            margin-top: 30px;
+            margin-left: 12px;
+            margin-right: 20px;
+            
+          
+            
+            overflow:hidden;
+            padding: 2px;
+            
+            
+            
+        }
+        
+        .box{
+            overflow: hidden;
+            margin: 50px;
+           
+        }
+        
+        .main-quote {
+	  
+            text-align: center;
+            font-size: 130%;
+            font-style: italic;
+            color: grey;
+
+        }
+        
+        .introduction{
+            padding: 2px;
+            font-size: 110%;
+            font-family: cursive
+        }
+        
+        .break{
+            height: 1px;
+            background-color: whitesmoke;
+            margin-bottom: 20px;
+        }
+        
+        .container{
+            margin-left: 149px;
+            overflow: hidden;
+        }
+        
+        
+        .about {
+	
+            position: relative;
+            float: left;
+            margin: 30px;
+            width:300px;
+            height: 280px;
+            overflow: hidden;
+            border-radius: 9px;
+            transition: font-size 2s ;
+            
+ 
+        }
+        
+        
+        .footer{
+            
+            width: 100%;
+            background-color: #1b1b18;
+            color: white;
+            height: 300px;
+            background-image: linear-gradient(to bottom right, #000, grey); 
+        }
+       
+        
+        
+        
+        .about-title{
+            font-family: monospace;
+            font-size: 150%;
+            text-align: center;
+            color:whitesmoke;
+            
+            
+
+}
+        .footer>div{
+            padding: 20px;
+            text-align: center;
+            margin:0 auto;
+            font-family: "Comic Sans MS";
+            
+        } 
+            
+        
+            
+            
+        }
+        
+        .about-link{
+            
+            margin: 0;
+            padding: 0;
+            
+        }
+        
+        .about:hover {
+	
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            font-size: 120%;
+            
+           
+
+        
+        }
+        
+        .destinations-intro p{
+
+            color: #27292b;
+            font-family:sans-serif;
+            text-align: justify;
+            font-size: 1.3em;
+            
+            
+        }
+        .destinations-images>div{
+            float: left;
+            margin-left: 50px;
+        }
+        .destinations-images p{
+            margin-left: 50px;
+            margin-right: 60px;
+            text-align: center;
+            font-family: arial;
+            color:#0e213a;
+        }
+        .circle{
+            border-radius: 50%;
+            height:100px;
+            width: 100px;
+            background-color: aqua;
+            margin-left: 50px;
+            margin-right: 60px;
+        }
+        
+        i{
+            size:7px;
+            margin:2px;
+        }
+        
+        img {
+              max-width: 100%;
+              height: auto;
+            
+              float: right;
+            
+
+            }
+        
+        
+       
+       
+        
+        
+        
+         @media only screen and (max-width:600px){
+            .container{
+                margin-left: 50px;
+            }
+            
+            
+            
+            .nav-link{
+                display: none;
+            }
+            .dropdown{
+	
+                display: block;
+
+            }
+            
+            
+            
+            
+        }
+        
+        
+        
+        
+        
+       
+        
+        
+    
+    </style>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+
+</head>
+<body>
+ 
+    <nav>
+    
+        
+        
+        <ul class="navbar-list">
+            <li class="heading">Himachal Pradesh</li>
+        
+            <li>
+               <a href="#about" class="nav-link">About</a> 
+            </li>
+                
+            <li>
+                <a href="#destinations" class="nav-link">Destinations</a>
+            </li>
+            
+            <li class="dropdown ">
+            
+                
+                    <a class="dropdown-item" href="#">
+                    <img class="hamburger" src="hamburger.png">
+                    </a>
+                    
+                
+                
+                
+                <div class="dropdown-list ">
+                
+                <a href="#about" class="dropdown-link">
+                    About
+                </a>
+                    
+                <a href="#destinations" class="dropdown-link">
+                            Destinations
+                </a >
+                    
+                <a href="#contact" class="dropdown-link">
+                            Contact us
+                </a >
+                    
+                
+                
+                </div>
+            
+            
+            </li>
+            
+            <span  style="float: right;"><a class="nav-link"  href="#contact">Contact us</a></span>
+        </ul>
+        
+        
+    </nav>
+    
+    
+    <div class="wallpaper-block">
+        <img class="gallery" src="background-start.jpg" alt="Himachal image">
+        
+    </div>
+    
+    <div class="box">
+        <p class="main-quote">"If the sight of the blue skies fills you with joy, if a blade of<br> grass springing up in the fields has power to move you, if the simple <br>things of nature have a message that you understand, rejoice, for your soul is alive."<br>
+            - Eleonora Duse
+
+        </p>
+    
+    </div>
+    
+    
+    <div class="box" id="about">
+        
+        <h1>About</h1>
+        
+        <hr>
+        
+    
+        <p class="introduction">
+        Himachal Pradesh (literally "snow-laden province") is a state in the northern part of India. Situated in the Western Himalayas, it is bordered by states of Jammu and Kashmir on the north, Punjab on the west, Haryana on the southwest, Uttarakhand on the southeast, and Tibet on the east. At its southernmost point, it also touches the state of Uttar Pradesh. The state's name was coined from the Sanskrit—Him means 'snow' and achal means 'land' or 'abode'—by acharya Diwakar Datt Sharma, one of the state's eminent Sanskrit scholars.
+    
+        </p>
+        
+        <p class="introduction">
+        The predominantly mountainous region comprising the present day Himachal Pradesh has been inhabited since pre-historic times having witnessed multiple waves of migration from other areas. Through it's history, the region was mostly ruled by local kingdoms some of which accepted suzerainty of larger empires. Prior to India's independence from British, Himachal comprised the hilly regions of Punjab Province of British India. After independence, many of the hilly territories were organized as the Chief Commisioner's province of Himachal Pradesh which later became a union territory. In 1966, hilly areas of neighboring Punjab state were merged into Himachal and it was ultimately granted full statehood in 1971.</p>
+
+        <p class="introduction">
+Himachal Pradesh is spread across valleys with many perennial rivers flowing through them. Almost 90% of the state's population lives in rural areas. Agriculture, horticulture, hydropower and tourism are important constituents of the state's economy. The hilly state is almost universally electrified with 99.5% of the households having electricity as of 2016. The state was declared India's second open-defecation free state in 2016. According to a survey of CMS - India Corruption Study 2017, Himachal Pradesh is India's <em>least corrupt </em>state.
+        </p>
+    
+    </div>
+    
+    
+    <div class="box" id="destinations">
+    
+        <h1>
+        Tourist Destinations
+
+        </h1>
+        <hr>
+    
+    <div id="destinations" class="destinations-intro" style="float: left">
+    <p>
+    While traditonally Himachal was known as a summer destination,the<br>
+    Department of Tourism & Civil Aviation has taken special efforts to break the <br>
+        seasonality factor and has developed diversified tourism products to attract<br>
+        tourists in other seasons too. Now Himachal is known as "A Destination for <br>
+    All Seasons and All Reasons". In fact, The department has laid a specal<br> emphasis on the development of activity-based tourism and opening up of <br>
+    new sub destinations. To promote tourism in the countryside and to<br>
+    unexplored areas, appropriate infrastructre is being developed within <br>
+    avialable resources.<br>
+    </p></div>
+    <div class="destinations-images" style="float: left">
+        <div>
+        <div class="circle" style="background-image: url('shimla_icon.jpg')">
+            
+        </div>
+        <div>
+        <p>Shimla</p>
+        
+        </div>
+         <div class="circle" style="background-image: url('dharamshala_icon.jpg')">
+            
+        </div>
+        
+        
+        <div>
+        <p>Dharamshala</p>
+        
+        </div>
+        </div>
+        <div>
+         <div class="circle"  style="background-image: url('kullu_icon.jpg')">
+            
+        </div>
+        <div>
+        <p>Kullu-Manali</p>
+        
+        </div>
+        <div class="circle"  style="background-image: url('leh_icon.jpg')">
+            
+        </div>
+        <div>
+        <p>Leh-Ladakh</p>
+        
+        </div>
+        </div>
+        </div>
+        
+        
+        
+    </div>
+    
+    <div class="box">
+     
+    <h1 style="margin-left: 30px; text-align: center">
+    The Land Of Gods</h1>
+        <hr>
+    </div>
+    
+   
+    <div class="container" >
+         
+         
+        <div class=" about-container" >
+            <a class="about-link himalayas" href="#">
+            <div class="about himalayas" style="background-image: url('Himalayas.jpg')" >
+           <p class="about-title">Himalayas</p> 
+            </div>
+            </a>
+            <a class="about-link" href="#">
+            <div class="about" style="background-image: url('flora.jpg')">
+                
+           <p class="about-title">Flora-Fauna</p> 
+            
+            </div>
+            </a>
+        
+        </div>
+        
+        <div class="about-container">
+            <a class="about-link" href="#">
+           <div class="about " style="background-image: url('foof.jpg')">
+           <p class="about-title">Food</p> 
+            
+            </div>
+            </a>
+            
+            <a class="about-link" href="#">
+            <div class="about" style="background-image: url('culture.jpg')">
+            
+            <p class="about-title">Culture</p> 
+            
+
+                
+            
+
+            </div>
+                
+            </a>
+        
+            
+        
+        </div>
+        
+        <div class="about-container">
+            
+            <a class="about-link" href="#">
+            
+            
+            
+            
+           
+            <div class="about" style="background-image: url('heritage.jpg')">
+           <p class="about-title">Heritage</p> 
+            
+            </div>
+                
+            </a>
+            
+            <a class="about-link" href="#">
+            
+            
+            
+        
+            
+            <div class="about" style="background-image: url('fests.jpg')">
+           <p class="about-title">Fairs-Fests</p> 
+            
+            </div>
+            
+            </a>
+        
+        
+        </div>
+    </div>
+    
+    
+    <div class="footer" id="contact">
+    
+        <div>
+        
+            <p>
+        
+            Follow us on
+    
+            </p>
+            <div>
+            <i class="fab fa-twitter-square fa-3x"></i>
+            <i class="fab fa-facebook-square fa-3x"></i>
+            <i class="fab fa-instagram fa-3x"></i>
+            </div>
+        
+        </div>
+        
+        <div>
+            <div class="break"></div>
+        Contact:-
+        Abhishek jain<br>
+        Jaypee University of Information technology<br>
+        +7831806369,+01984XXXXX
+        
+        </div>
+    
+    
+    </div>
+    
+    
+
+    
+
+</body>
+</html>
